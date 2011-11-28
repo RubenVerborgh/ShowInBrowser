@@ -1,0 +1,19 @@
+<script>
+  // Get the URI from the query string.
+  var uri = decodeURIComponent(location.search.replace(/^\?uri=/, ""));
+  
+  // Request the URI.
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", uri, true);
+  // Be notified when the resource is loaded.
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      // Display the resource inside a <pre> element.
+      var element = document.createElement("pre"),
+          content = document.createTextNode(xhr.responseText);
+      element.appendChild(content);
+      document.body.appendChild(element);
+    }
+  };
+  xhr.send();
+</script>

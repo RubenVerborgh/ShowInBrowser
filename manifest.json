@@ -1,0 +1,12 @@
+{
+  "name": "Show in browser",
+  "version": "0.1",
+  "description": "Shows various types of textual files inside of the browser instead of downloading them.",
+  "background_page": "background.html",
+  "permissions": [
+    "experimental",
+    "tabs",
+    "downloads",
+    "http://*/"
+  ]
+}
