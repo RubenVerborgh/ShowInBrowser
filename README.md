@@ -9,7 +9,7 @@ This extension aims to change this using the experimental [downloads API](https:
 ## Limitations
 - Currently, it only works with the latest [Canary](http://tools.google.com/dlpage/chromesxs).
 - You need to enable Experimental Extension APIs in `chrome://flags`.
-- The download is not canceled, as this appears not to be implemented in Chrome yet.
+- The download is canceled, but still appears on the downloads bar.
 
 ## Download
 As this extension uses an experimental API, it cannot be downloaded from the Chrome Web Store.

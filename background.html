@@ -8,12 +8,7 @@ chrome.experimental.downloads.onCreated.addListener(function (item) {
   // Check if the MIME type is a derivative of text.
   if(item.mime.match(/^text\//)) {
     // Cancel the download.
-    try {
-      downloads.cancel(item.id);
-    }
-    catch(err) {
-      // cancel is currently not implemented in Chrome
-    }
+    downloads.cancel(item.id);
     // Create a new tab that will show the source code of the file.
     chrome.tabs.create({'url': chrome.extension.getURL("viewfile.html") + "?uri=" + encodeURIComponent(item.url)});
   }
